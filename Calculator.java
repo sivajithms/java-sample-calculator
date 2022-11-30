@@ -210,9 +210,7 @@ public class Calculator implements ActionListener{
 	    	  result = oldValueF / newValueF;
 	        break;
 
-	      default:
-	        System.out.println("Invalid operator!");
-	        break;
+	      
 	    }
 		displayLabel.setText(result+"");
 		
