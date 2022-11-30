@@ -177,6 +177,8 @@ public class Calculator implements ActionListener{
 	public static void main(String[] args) {
 		new Calculator();
 	}
+	
+	
 
 
 	@Override
@@ -186,7 +188,32 @@ public class Calculator implements ActionListener{
 		String newValue=displayLabel.getText();
 		float oldValueF=Float.parseFloat(oldValue);
 		float newValueF=Float.parseFloat(newValue);
-		result=newValueF+oldValueF;
+		switch (operator) {
+
+	      // performs addition between numbers
+	      case "+":
+	        result = oldValueF + newValueF;
+	        break;
+
+	      // performs subtraction between numbers
+	      case "-":
+	        result = oldValueF - newValueF;	        
+	        break;
+
+	      // performs multiplication between numbers
+	      case "*":
+	    	  result = oldValueF * newValueF;
+	        break;
+
+	      // performs division between numbers
+	      case "/":
+	    	  result = oldValueF / newValueF;
+	        break;
+
+	      default:
+	        System.out.println("Invalid operator!");
+	        break;
+	    }
 		displayLabel.setText(result+"");
 		
 		}else if(e.getSource()==sevenButton) {
